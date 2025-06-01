@@ -12,6 +12,7 @@ router.use(verifyToken, requireRole("admin"));
 router.post("/create-user", adminController.createUser);
 router.get("/users", adminController.getAllUsers); // This already exists
 router.delete("/user/:id", adminController.deleteUser);
+router.put("/user/:id", adminController.updateUser);
 
 // 📊 Admin Dashboard Stats
 router.get("/dashboard-stats", async (req, res) => {
